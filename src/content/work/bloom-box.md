@@ -1,23 +1,70 @@
 ---
-title: Bloom Box
-publishDate: 2019-12-01 00:00:00
+title: Plataforma de Finanzas para Mujeres
+publishDate: 2024-08-01 00:00:00
 img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Plataforma web de finanzas diseñada específicamente para mujeres
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  Aplicación web completa desarrollada durante el bootcamp utilizando el stack MERN,
+  enfocada en empoderar financieramente a las mujeres con herramientas educativas y de gestión.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - React
+  - Node.js
+  - MongoDB
+  - Express
+  - MERN Stack
+  - Fintech
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## Plataforma de Finanzas para Mujeres - Proyecto Bootcamp
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+Durante mi bootcamp de desarrollo web fullstack en 2024, desarrollé una plataforma completa de finanzas diseñada específicamente para empoderar financieramente a las mujeres, utilizando el stack MERN completo.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+### Concepto y Motivación
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+La brecha de género en educación financiera es una realidad que afecta a millones de mujeres. Esta plataforma nació con el objetivo de democratizar el acceso a herramientas financieras y educación, proporcionando un espacio seguro y accesible para que las mujeres puedan gestionar sus finanzas personales.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+### Características Principales
+
+- **Dashboard Personalizado**: Visualización clara de ingresos, gastos e inversiones
+- **Educación Financiera**: Módulos interactivos sobre inversión, ahorro y planificación
+- **Calculadoras Financieras**: Herramientas para préstamos, inversiones y planificación de jubilación
+- **Comunidad**: Foro para compartir experiencias y consejos financieros
+- **Tracking de Objetivos**: Seguimiento de metas financieras personalizadas
+
+### Stack Tecnológico MERN
+
+**Frontend:**
+- **React.js**: Para crear una interfaz de usuario dinámica e interactiva
+- **Material-UI**: Componentes estilizados y responsive design
+- **Chart.js**: Visualización de datos financieros
+- **Axios**: Para comunicación con el backend
+
+**Backend:**
+- **Node.js**: Runtime del servidor
+- **Express.js**: Framework web para APIs RESTful
+- **JWT**: Autenticación y autorización segura
+- **Bcrypt**: Encriptación de contraseñas
+
+**Base de Datos:**
+- **MongoDB**: Base de datos NoSQL para flexibilidad en el manejo de datos
+- **Mongoose**: ODM para modelado de datos
+
+### Funcionalidades Implementadas
+
+1. **Registro y Autenticación**: Sistema completo de usuarios con validación
+2. **Gestión de Perfil**: Personalización de información y preferencias
+3. **Calculadora de Presupuesto**: Herramienta para planificación financiera mensual
+4. **Módulos Educativos**: Contenido interactivo sobre finanzas personales
+5. **Responsive Design**: Adaptación completa a dispositivos móviles
+
+### Aprendizajes y Logros
+
+Este proyecto me permitió consolidar mis conocimientos en desarrollo fullstack, especialmente en:
+- Arquitectura de aplicaciones con separación frontend/backend
+- Gestión de estados complejos en React
+- Diseño de APIs RESTful
+- Trabajo con bases de datos NoSQL
+- Implementación de autenticación segura
+- Diseño responsive y UX/UI
+
+La plataforma recibió excelente feedback tanto de instructores como de compañeros del bootcamp, destacando su enfoque social y la calidad técnica de la implementación.

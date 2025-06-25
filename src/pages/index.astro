@@ -31,18 +31,18 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Fernanda Fariña"
-					tagline="I am a Creative Developer who is currently based in Santiago, Chile."
+					tagline="I am a Software Engineer, Frontend Developer and PM who is currently based in Santiago, Chile."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="strategy" size="1.33em" /> Designer</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> Freelancer</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="I like kittens"
+					alt="Fernanda Fariña - Software Engineer and Frontend Developer"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -55,8 +55,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Featured Projects</h3>
+					<p>Take a look below at some of my recent projects including automation systems, fintech applications, and VC platforms.</p>
 				</header>
 
 				<div class="gallery">
@@ -81,19 +81,26 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Connect With Me</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Let's connect! You can find me on these platforms where I share my work and connect with the tech community.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							[
+								{ name: 'GitHub', url: 'https://github.com/feerness' },
+								{ name: 'LinkedIn', url: 'https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271' },
+								{ name: 'NeoVC', url: 'https://www.neovc.com' },
+								{ name: 'Portfolio', url: '#' },
+								{ name: 'Contact', url: 'mailto:fernandafarinavaldes@gmail.com' }
+							].map((platform) => (
 								<li class="mention-card">
-									<p>{brand}</p>
+									<a href={platform.url} target="_blank" rel="noopener noreferrer">
+										<p>{platform.name}</p>
+									</a>
 								</li>
 							))
 						}
