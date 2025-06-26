@@ -75,23 +75,21 @@ const { size = 'medium' } = Astro.props;
   }
 
   .cat-ear.left {
-    left: 25px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 35px solid var(--gradient-stop-1);
-    transform: rotate(-25deg);
-    animation-delay: 0s;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    left: 12px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 25px solid var(--gradient-stop-1);
+    transform: rotate(-30deg);
+    top: -12px;
   }
 
   .cat-ear.right {
-    right: 25px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 35px solid var(--gradient-stop-1);
-    transform: rotate(25deg);
-    animation-delay: 0.5s;
-    filter: drop-shadow(-2px 2px 4px rgba(0,0,0,0.2));
+    right: 12px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 25px solid var(--gradient-stop-1);
+    transform: rotate(30deg);
+    top: -12px;
   }
 
   /* Hearts */
@@ -154,11 +152,11 @@ const { size = 'medium' } = Astro.props;
   }
 
   .cat-ear.left {
-    --initial-rotation: -25deg;
+    --initial-rotation: -30deg;
   }
 
   .cat-ear.right {
-    --initial-rotation: 25deg;
+    --initial-rotation: 30deg;
   }
 
   @keyframes floatHeart {
@@ -186,19 +184,21 @@ const { size = 'medium' } = Astro.props;
     }
 
     .cat-ear.left {
-      left: 22px;
-      border-left: 16px solid transparent;
-      border-right: 16px solid transparent;
-      border-bottom: 28px solid var(--gradient-stop-1);
-      top: -12px;
+      left: 12px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 25px solid var(--gradient-stop-1);
+      transform: rotate(-30deg);
+      top: -10px;
     }
 
     .cat-ear.right {
-      right: 22px;
-      border-left: 16px solid transparent;
-      border-right: 16px solid transparent;
-      border-bottom: 28px solid var(--gradient-stop-1);
-      top: -12px;
+      right: 12px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 25px solid var(--gradient-stop-1);
+      transform: rotate(30deg);
+      top: -10px;
     }
   }
 </style> 
