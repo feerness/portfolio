@@ -12,6 +12,7 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import CatAnimation from '../components/CatAnimation.astro';
+import SocialCard from '../components/SocialCard.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -80,18 +81,20 @@ const projects = (await getCollection('work'))
 
 				<div class="gallery">
 					<Grid variant="small">
-						{
-							[
-								{ name: 'GitHub', url: 'https://github.com/feerness' },
-								{ name: 'LinkedIn', url: 'https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271' }
-							].map((platform) => (
-								<li class="mention-card">
-									<a href={platform.url} target="_blank" rel="noopener noreferrer">
-										<p>{platform.name}</p>
-									</a>
-								</li>
-							))
-						}
+						<li>
+							<SocialCard 
+								platform="github" 
+								url="https://github.com/feerness"
+								username="feerness"
+							/>
+						</li>
+						<li>
+							<SocialCard 
+								platform="linkedin" 
+								url="https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271"
+								username="fernanda-fariña-valdés"
+							/>
+						</li>
 					</Grid>
 				</div>
 			</section>
@@ -224,24 +227,4 @@ const projects = (await getCollection('work'))
 	}
 
 	/* ====================================================== */
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
 </style>
