@@ -65,27 +65,33 @@ const { size = 'medium' } = Astro.props;
     animation: subtleGlow 3s ease-in-out infinite;
   }
 
-  /* Cat ears - more defined and cat-like */
+  /* Cat ears - more triangular and cat-like */
   .cat-ear {
     position: absolute;
-    width: 35px;
-    height: 45px;
-    background: linear-gradient(145deg, var(--gradient-stop-1), var(--gradient-stop-2));
-    border-radius: 50% 50% 0 0;
-    top: -25px;
+    width: 0;
+    height: 0;
+    top: -15px;
     animation: earTwitch 5s ease-in-out infinite;
   }
 
   .cat-ear.left {
-    left: 20px;
-    transform: rotate(-20deg);
+    left: 25px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid var(--gradient-stop-1);
+    transform: rotate(-25deg);
     animation-delay: 0s;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
   }
 
   .cat-ear.right {
-    right: 20px;
-    transform: rotate(20deg);
+    right: 25px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid var(--gradient-stop-1);
+    transform: rotate(25deg);
     animation-delay: 0.5s;
+    filter: drop-shadow(-2px 2px 4px rgba(0,0,0,0.2));
   }
 
   /* Hearts */
@@ -144,15 +150,15 @@ const { size = 'medium' } = Astro.props;
 
   @keyframes earTwitch {
     0%, 90%, 100% { transform: rotate(var(--initial-rotation)); }
-    95% { transform: rotate(calc(var(--initial-rotation) + 5deg)); }
+    95% { transform: rotate(calc(var(--initial-rotation) + 3deg)); }
   }
 
   .cat-ear.left {
-    --initial-rotation: -20deg;
+    --initial-rotation: -25deg;
   }
 
   .cat-ear.right {
-    --initial-rotation: 20deg;
+    --initial-rotation: 25deg;
   }
 
   @keyframes floatHeart {
@@ -179,18 +185,20 @@ const { size = 'medium' } = Astro.props;
       height: 85px;
     }
 
-    .cat-ear {
-      width: 30px;
-      height: 38px;
-      top: -20px;
-    }
-
     .cat-ear.left {
-      left: 18px;
+      left: 22px;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 28px solid var(--gradient-stop-1);
+      top: -12px;
     }
 
     .cat-ear.right {
-      right: 18px;
+      right: 22px;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 28px solid var(--gradient-stop-1);
+      top: -12px;
     }
   }
 </style> 
