@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
 ---
 
 <BaseLayout title="About | Fernanda Fariña" description="About Fernanda Fariña - Software Engineer and Frontend Developer from Santiago, Chile">
@@ -14,10 +14,14 @@ import Hero from '../components/Hero.astro';
 			>
 			</Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
+			<!-- Background Section -->
+			<section class="animated-section">
+				<div class="section-header">
+					<Icon icon="user" size="2rem" gradient />
+					<h2 class="section-title">Background</h2>
+				</div>
+				<div class="content-card">
+					<p class="highlight-text">
 						Computer Engineering graduate from <strong>Duoc UC</strong> in 2023, I'm passionate about technology with great curiosity and eagerness to learn. My journey in web development intensified when I completed a fullstack web development bootcamp in 2024.
 					</p>
 					<p>
@@ -28,38 +32,131 @@ import Hero from '../components/Hero.astro';
 					</p>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p><strong>Computer Engineering</strong> - Duoc UC (2023)</p>
-					<p><strong>Fullstack Web Development Bootcamp</strong> (2024)</p>
-					<p>Continuous training in emerging technologies and development best practices.</p>
+
+			<!-- Education Section -->
+			<section class="animated-section">
+				<div class="section-header">
+					<Icon icon="academic-cap" size="2rem" gradient />
+					<h2 class="section-title">Education</h2>
+				</div>
+				<div class="education-grid">
+					<div class="education-card">
+						<div class="education-year">2023</div>
+						<h3>Computer Engineering</h3>
+						<p>Duoc UC</p>
+					</div>
+					<div class="education-card">
+						<div class="education-year">2024</div>
+						<h3>Fullstack Web Development</h3>
+						<p>Bootcamp</p>
+					</div>
+					<div class="education-card ongoing">
+						<div class="education-year">Ongoing</div>
+						<h3>Continuous Learning</h3>
+						<p>Emerging technologies and best practices</p>
+					</div>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Technical Skills</h2>
-				<div class="content">
-					<p><strong>Frontend:</strong> JavaScript, TypeScript, React, Next.js, HTML5, CSS3, Material-UI (MUI)</p>
-					<p><strong>Backend:</strong> Node.js, Express.js, Python</p>
-					<p><strong>Database:</strong> MongoDB, PostgreSQL</p>
-					<p><strong>Tools & Others:</strong> Git, QR Technology, Automation Systems, Project Management</p>
+
+			<!-- Technical Skills Section -->
+			<section class="animated-section">
+				<div class="section-header">
+					<Icon icon="code" size="2rem" gradient />
+					<h2 class="section-title">Technical Skills</h2>
+				</div>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<div class="skill-icon">🎨</div>
+						<h3>Frontend</h3>
+						<div class="skill-tags">
+							<span class="skill-tag">JavaScript</span>
+							<span class="skill-tag">TypeScript</span>
+							<span class="skill-tag">React</span>
+							<span class="skill-tag">Next.js</span>
+							<span class="skill-tag">HTML5</span>
+							<span class="skill-tag">CSS3</span>
+							<span class="skill-tag">MUI</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<div class="skill-icon">⚙️</div>
+						<h3>Backend</h3>
+						<div class="skill-tags">
+							<span class="skill-tag">Node.js</span>
+							<span class="skill-tag">Express.js</span>
+							<span class="skill-tag">Python</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<div class="skill-icon">🗄️</div>
+						<h3>Database</h3>
+						<div class="skill-tags">
+							<span class="skill-tag">MongoDB</span>
+							<span class="skill-tag">PostgreSQL</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<div class="skill-icon">🛠️</div>
+						<h3>Tools & Others</h3>
+						<div class="skill-tags">
+							<span class="skill-tag">Git</span>
+							<span class="skill-tag">QR Technology</span>
+							<span class="skill-tag">Automation</span>
+							<span class="skill-tag">Project Management</span>
+						</div>
+					</div>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Soft Skills</h2>
-				<div class="content">
-					<p><strong>Communication:</strong> Effective communication with technical and non-technical teams</p>
-					<p><strong>Proactivity:</strong> Taking initiative to identify improvements and solutions</p>
-					<p><strong>Teamwork:</strong> Collaborative approach in agile development environments</p>
-					<p><strong>Detail & Client Oriented:</strong> Focus on quality and user experience</p>
-					<p><strong>Fast Learning:</strong> Quick adaptation to new technologies and methodologies</p>
+
+			<!-- Soft Skills Section -->
+			<section class="animated-section">
+				<div class="section-header">
+					<Icon icon="heart" size="2rem" gradient />
+					<h2 class="section-title">Soft Skills</h2>
+				</div>
+				<div class="soft-skills-grid">
+					<div class="soft-skill-card">
+						<div class="soft-skill-icon">💬</div>
+						<h3>Communication</h3>
+						<p>Effective communication with technical and non-technical teams</p>
+					</div>
+					<div class="soft-skill-card">
+						<div class="soft-skill-icon">🚀</div>
+						<h3>Proactivity</h3>
+						<p>Taking initiative to identify improvements and solutions</p>
+					</div>
+					<div class="soft-skill-card">
+						<div class="soft-skill-icon">🤝</div>
+						<h3>Teamwork</h3>
+						<p>Collaborative approach in agile development environments</p>
+					</div>
+					<div class="soft-skill-card">
+						<div class="soft-skill-icon">🎯</div>
+						<h3>Detail & Client Oriented</h3>
+						<p>Focus on quality and user experience</p>
+					</div>
+					<div class="soft-skill-card">
+						<div class="soft-skill-icon">📚</div>
+						<h3>Fast Learning</h3>
+						<p>Quick adaptation to new technologies and methodologies</p>
+					</div>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Community Involvement</h2>
-				<div class="content">
+
+			<!-- Community Involvement Section -->
+			<section class="animated-section">
+				<div class="section-header">
+					<Icon icon="users" size="2rem" gradient />
+					<h2 class="section-title">Community Involvement</h2>
+				</div>
+				<div class="community-card">
+					<div class="community-highlight">
+						<div class="community-icon">👩‍💻</div>
+						<h3>"Mujeres en las TICs"</h3>
+						<p class="community-subtitle">Women in ICT - Inclusiona</p>
+					</div>
 					<p>
-						Active member of <strong>"Mujeres en las TICs"</strong> (Women in ICT) community at Inclusiona, where I participate in webinars, workshops, and seminars focused on promoting gender diversity in technology.
+						Active member where I participate in webinars, workshops, and seminars focused on promoting gender diversity in technology.
 					</p>
 					<p>
 						This community provides a supportive environment for women in tech to share knowledge, network, and grow professionally while contributing to a more inclusive tech industry.
@@ -76,56 +173,283 @@ import Hero from '../components/Hero.astro';
 	.about {
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 4rem;
+		padding: 2rem 0;
 	}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+	/* Animated Sections */
+	.animated-section {
+		opacity: 0;
+		transform: translateY(30px);
+		animation: fadeInUp 0.8s ease-out forwards;
 	}
 
-	section {
+	.animated-section:nth-child(2) { animation-delay: 0.1s; }
+	.animated-section:nth-child(3) { animation-delay: 0.2s; }
+	.animated-section:nth-child(4) { animation-delay: 0.3s; }
+	.animated-section:nth-child(5) { animation-delay: 0.4s; }
+	.animated-section:nth-child(6) { animation-delay: 0.5s; }
+
+	@keyframes fadeInUp {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Section Headers */
+	.section-header {
 		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
+		font-size: var(--text-2xl);
 		color: var(--gray-0);
+		margin: 0;
+		background: linear-gradient(135deg, var(--accent-regular), var(--accent-dark));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
-	.content {
-		grid-column: 2 / 4;
+	/* Content Cards */
+	.content-card {
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2.5rem;
+		box-shadow: var(--shadow-lg);
+		backdrop-filter: blur(10px);
+		transition: all 0.3s ease;
 	}
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
+	.content-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--accent-regular);
 	}
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
+	.highlight-text {
+		background: linear-gradient(135deg, var(--accent-subtle), var(--accent-overlay));
+		border-radius: 1rem;
+		padding: 1.5rem;
+		margin-bottom: 1.5rem;
+		border-left: 4px solid var(--accent-regular);
 	}
 
-	@media (min-width: 50em) {
+	/* Education Grid */
+	.education-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.education-card {
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.education-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--accent-regular), var(--accent-dark));
+	}
+
+	.education-card.ongoing::before {
+		background: linear-gradient(90deg, var(--accent-dark), var(--accent-regular));
+		animation: shimmer 2s ease-in-out infinite;
+	}
+
+	@keyframes shimmer {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.5; }
+	}
+
+	.education-card:hover {
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--accent-regular);
+	}
+
+	.education-year {
+		display: inline-block;
+		background: var(--accent-regular);
+		color: var(--gray-999);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		font-weight: 600;
+		font-size: var(--text-sm);
+		margin-bottom: 1rem;
+	}
+
+	.education-card h3 {
+		color: var(--gray-0);
+		margin: 0.5rem 0;
+		font-size: var(--text-lg);
+	}
+
+	/* Skills Grid */
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.skill-category {
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	.skill-category:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--accent-regular);
+	}
+
+	.skill-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.skill-category h3 {
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+		font-size: var(--text-lg);
+	}
+
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.skill-tag {
+		background: linear-gradient(135deg, var(--accent-subtle), var(--accent-overlay));
+		color: var(--gray-0);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		font-size: var(--text-sm);
+		border: 1px solid var(--accent-regular);
+		transition: all 0.3s ease;
+	}
+
+	.skill-tag:hover {
+		background: var(--accent-regular);
+		color: var(--gray-999);
+		transform: scale(1.05);
+	}
+
+	/* Soft Skills Grid */
+	.soft-skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.soft-skill-card {
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	.soft-skill-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--accent-regular);
+	}
+
+	.soft-skill-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.soft-skill-card h3 {
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+		font-size: var(--text-lg);
+	}
+
+	/* Community Card */
+	.community-card {
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2.5rem;
+		box-shadow: var(--shadow-lg);
+		transition: all 0.3s ease;
+	}
+
+	.community-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--accent-regular);
+	}
+
+	.community-highlight {
+		text-align: center;
+		margin-bottom: 2rem;
+		padding: 2rem;
+		background: linear-gradient(135deg, var(--accent-subtle), var(--accent-overlay));
+		border-radius: 1rem;
+		border: 1px solid var(--accent-regular);
+	}
+
+	.community-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.community-highlight h3 {
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+		font-size: var(--text-xl);
+	}
+
+	.community-subtitle {
+		color: var(--accent-regular);
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+
+	/* Responsive */
+	@media (max-width: 50em) {
 		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+			gap: 3rem;
+			padding: 1rem 0;
 		}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
+		.content-card,
+		.community-card {
+			padding: 2rem;
 		}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
+		.education-grid,
+		.skills-grid,
+		.soft-skills-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-title {
+			font-size: var(--text-xl);
 		}
 	}
 </style>

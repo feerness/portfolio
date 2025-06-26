@@ -24,9 +24,13 @@ const isCurrentPage = (href: string) => {
 	const normalizeHref = href.endsWith('/') ? href : href + '/';
 	const normalizeCurrentPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
 	
-	// Check if current path matches the href
-	return normalizeCurrentPath === normalizeHref || 
-		   (normalizeHref !== baseUrl && normalizeCurrentPath.startsWith(normalizeHref));
+	// Exact match for home page
+	if (normalizeHref === baseUrl) {
+		return normalizeCurrentPath === baseUrl;
+	}
+	
+	// Exact match for other pages
+	return normalizeCurrentPath === normalizeHref;
 };
 ---
 
