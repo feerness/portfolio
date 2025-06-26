@@ -1,6 +1,6 @@
 # Fernanda Fariña - Portfolio
 
-A modern, responsive portfolio website built with Astro and deployed on GitHub Pages.
+A modern portfolio website built with Astro and deployed on GitHub Pages.
 
 ## About
 

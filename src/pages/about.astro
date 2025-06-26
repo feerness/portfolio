@@ -20,16 +20,42 @@ import Icon from '../components/Icon.astro';
 					<Icon icon="user" size="2rem" gradient />
 					<h2 class="section-title">Background</h2>
 				</div>
-				<div class="content-card">
-					<p class="highlight-text">
-						Computer Engineering graduate from <strong>Duoc UC</strong> in 2023, I'm passionate about technology with great curiosity and eagerness to learn. My journey in web development intensified when I completed a fullstack web development bootcamp in 2024.
-					</p>
-					<p>
-						Currently, I'm happily working at a startup where I apply my knowledge and continue growing professionally. While I understand the entire development flow in general, I specialize in <strong>frontend development</strong>, although I'm always learning from all areas of software development.
-					</p>
-					<p>
-						My main focus is on creating exceptional user experiences using modern technologies. I love solving complex problems and transforming ideas into functional and attractive applications.
-					</p>
+				
+				<div class="background-timeline">
+					<div class="timeline-item">
+						<div class="timeline-marker">🎓</div>
+						<div class="timeline-content">
+							<h3>Computer Engineering Graduate</h3>
+							<p class="timeline-subtitle">Duoc UC • 2023</p>
+							<p>Passionate about technology with great curiosity and eagerness to learn.</p>
+						</div>
+					</div>
+					
+					<div class="timeline-item">
+						<div class="timeline-marker">💻</div>
+						<div class="timeline-content">
+							<h3>Fullstack Web Development Journey</h3>
+							<p class="timeline-subtitle">Bootcamp • 2024</p>
+							<p>Intensified my web development skills and discovered my passion for creating digital experiences.</p>
+						</div>
+					</div>
+					
+					<div class="timeline-item current">
+						<div class="timeline-marker">🚀</div>
+						<div class="timeline-content">
+							<h3>Frontend Developer at Startup</h3>
+							<p class="timeline-subtitle">Present</p>
+							<p>Applying knowledge and growing professionally while specializing in <strong>frontend development</strong>.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="focus-card">
+					<div class="focus-icon">✨</div>
+					<div class="focus-content">
+						<h3>My Focus</h3>
+						<p>Creating exceptional user experiences using modern technologies. I love solving problems and transforming ideas into functional and attractive applications.</p>
+					</div>
 				</div>
 			</section>
 
@@ -174,7 +200,7 @@ import Icon from '../components/Icon.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 4rem;
-		padding: 2rem 0;
+		padding: 2rem 1rem;
 	}
 
 	/* Animated Sections */
@@ -182,6 +208,7 @@ import Icon from '../components/Icon.astro';
 		opacity: 0;
 		transform: translateY(30px);
 		animation: fadeInUp 0.8s ease-out forwards;
+		padding: 0 0.5rem;
 	}
 
 	.animated-section:nth-child(2) { animation-delay: 0.1s; }
@@ -202,7 +229,8 @@ import Icon from '../components/Icon.astro';
 		display: flex;
 		align-items: center;
 		gap: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
+		padding: 0 0.5rem;
 	}
 
 	.section-title {
@@ -221,6 +249,7 @@ import Icon from '../components/Icon.astro';
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		padding: 2.5rem;
+		margin: 0 0.5rem 2rem 0.5rem;
 		box-shadow: var(--shadow-lg);
 		backdrop-filter: blur(10px);
 		transition: all 0.3s ease;
@@ -244,18 +273,21 @@ import Icon from '../components/Icon.astro';
 	.education-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 1.5rem;
+		gap: 2rem;
+		padding: 0 0.5rem;
+		margin-bottom: 1rem;
 	}
 
 	.education-card {
 		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
-		padding: 2rem;
+		padding: 2.5rem;
 		text-align: center;
 		transition: all 0.3s ease;
 		position: relative;
 		overflow: hidden;
+		margin-bottom: 1rem;
 	}
 
 	.education-card::before {
@@ -305,15 +337,18 @@ import Icon from '../components/Icon.astro';
 	.skills-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		gap: 2.5rem;
+		padding: 0 0.5rem;
+		margin-bottom: 1rem;
 	}
 
 	.skill-category {
 		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
-		padding: 2rem;
+		padding: 2.5rem;
 		transition: all 0.3s ease;
+		margin-bottom: 1rem;
 	}
 
 	.skill-category:hover {
@@ -359,16 +394,19 @@ import Icon from '../components/Icon.astro';
 	.soft-skills-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 1.5rem;
+		gap: 2rem;
+		padding: 0 0.5rem;
+		margin-bottom: 1rem;
 	}
 
 	.soft-skill-card {
 		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
-		padding: 2rem;
+		padding: 2.5rem;
 		text-align: center;
 		transition: all 0.3s ease;
+		margin-bottom: 1rem;
 	}
 
 	.soft-skill-card:hover {
@@ -394,6 +432,7 @@ import Icon from '../components/Icon.astro';
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		padding: 2.5rem;
+		margin: 0 0.5rem 2rem 0.5rem;
 		box-shadow: var(--shadow-lg);
 		transition: all 0.3s ease;
 	}
@@ -430,16 +469,153 @@ import Icon from '../components/Icon.astro';
 		margin-bottom: 0;
 	}
 
+	/* Background Timeline Styles */
+	.background-timeline {
+		position: relative;
+		padding: 2rem 0;
+		margin: 0 0.5rem;
+	}
+
+	.background-timeline::before {
+		content: '';
+		position: absolute;
+		left: 30px;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: linear-gradient(180deg, var(--accent-regular), var(--accent-dark));
+		border-radius: 1px;
+	}
+
+	.timeline-item {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		gap: 2rem;
+		margin-bottom: 3rem;
+		padding-left: 1rem;
+	}
+
+	.timeline-item:last-child {
+		margin-bottom: 0;
+	}
+
+	.timeline-marker {
+		position: relative;
+		z-index: 2;
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 3px solid var(--accent-regular);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		flex-shrink: 0;
+		transition: all 0.3s ease;
+		box-shadow: var(--shadow-md);
+	}
+
+	.timeline-item.current .timeline-marker {
+		background: var(--accent-regular);
+		border-color: var(--accent-dark);
+		animation: pulse 2s ease-in-out infinite;
+		box-shadow: 0 0 20px rgba(118, 17, 166, 0.4);
+	}
+
+	.timeline-content {
+		flex: 1;
+		background: linear-gradient(135deg, var(--gray-999_40), var(--gray-800_40));
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		margin-top: 0.5rem;
+		transition: all 0.3s ease;
+	}
+
+	.timeline-content:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-regular);
+	}
+
+	.timeline-content h3 {
+		color: var(--gray-0);
+		margin: 0 0 0.5rem 0;
+		font-size: var(--text-lg);
+	}
+
+	.timeline-subtitle {
+		color: var(--accent-regular);
+		font-weight: 600;
+		font-size: var(--text-sm);
+		margin: 0 0 1rem 0;
+		opacity: 0.9;
+	}
+
+	.timeline-content p:last-child {
+		margin: 0;
+		color: var(--gray-300);
+		line-height: 1.5;
+	}
+
+	/* Focus Card */
+	.focus-card {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		background: linear-gradient(135deg, var(--accent-subtle), var(--accent-overlay));
+		border: 1px solid var(--accent-regular);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		margin: 2rem 0.5rem 0 0.5rem;
+		transition: all 0.3s ease;
+	}
+
+	.focus-card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.focus-icon {
+		font-size: 2.5rem;
+		flex-shrink: 0;
+		animation: sparkle 3s ease-in-out infinite;
+	}
+
+	@keyframes sparkle {
+		0%, 100% { transform: scale(1) rotate(0deg); }
+		25% { transform: scale(1.1) rotate(5deg); }
+		75% { transform: scale(1.05) rotate(-5deg); }
+	}
+
+	.focus-content h3 {
+		color: var(--gray-0);
+		margin: 0 0 0.5rem 0;
+		font-size: var(--text-lg);
+	}
+
+	.focus-content p {
+		margin: 0;
+		color: var(--gray-200);
+		line-height: 1.6;
+	}
+
 	/* Responsive */
 	@media (max-width: 50em) {
 		.about {
-			gap: 2.5rem;
-			padding: 1rem 0;
+			gap: 3rem;
+			padding: 1.5rem 1rem;
+		}
+
+		.animated-section {
+			padding: 0 0.75rem;
 		}
 
 		.section-header {
-			margin-bottom: 1.5rem;
-			padding: 0 0.5rem;
+			margin-bottom: 2rem;
+			padding: 0 0.75rem;
 		}
 
 		.section-title {
@@ -448,45 +624,88 @@ import Icon from '../components/Icon.astro';
 
 		.content-card,
 		.community-card {
-			padding: 1.5rem;
-			margin: 0 0.5rem;
+			padding: 2rem;
+			margin: 0 0.75rem 1.5rem 0.75rem;
 		}
 
 		.highlight-text {
-			padding: 1rem;
-			margin-bottom: 1rem;
+			padding: 1.5rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.education-grid,
 		.skills-grid,
 		.soft-skills-grid {
 			grid-template-columns: 1fr;
-			gap: 1rem;
-			padding: 0 0.5rem;
+			gap: 1.5rem;
+			padding: 0 0.75rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.education-card,
 		.skill-category,
 		.soft-skill-card {
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem;
+			padding: 2rem;
 		}
 
 		.skill-tags {
-			gap: 0.375rem;
+			gap: 0.5rem;
 		}
 
 		.skill-tag {
-			padding: 0.375rem 0.75rem;
-			font-size: 0.75rem;
+			padding: 0.5rem 1rem;
+			font-size: 0.8rem;
 		}
 
 		.community-highlight {
-			padding: 1.5rem;
-			margin-bottom: 1.5rem;
+			padding: 2rem;
+			margin-bottom: 2rem;
 		}
 
 		.community-icon {
 			font-size: 2.5rem;
+		}
+
+		/* Timeline responsive */
+		.background-timeline {
+			padding: 1.5rem 0;
+			margin: 0 0.75rem;
+		}
+
+		.background-timeline::before {
+			left: 25px;
+		}
+
+		.timeline-item {
+			gap: 1.5rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.timeline-marker {
+			width: 50px;
+			height: 50px;
+			font-size: 1.25rem;
+		}
+
+		.timeline-content {
+			padding: 1.25rem;
+		}
+
+		.timeline-content h3 {
+			font-size: var(--text-base);
+		}
+
+		.focus-card {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
+			padding: 1.5rem;
+			margin: 1.5rem 0.75rem 0 0.75rem;
+		}
+
+		.focus-icon {
+			font-size: 2rem;
 		}
 	}
 
@@ -494,6 +713,10 @@ import Icon from '../components/Icon.astro';
 		.about {
 			gap: 2rem;
 			padding: 0.5rem 0;
+		}
+
+		.animated-section {
+			padding: 0 0.25rem;
 		}
 
 		.section-header {
@@ -508,7 +731,7 @@ import Icon from '../components/Icon.astro';
 		.content-card,
 		.community-card {
 			padding: 1.25rem;
-			margin: 0 0.25rem;
+			margin: 0 0.25rem 1.5rem 0.25rem;
 		}
 
 		.highlight-text {
@@ -520,6 +743,7 @@ import Icon from '../components/Icon.astro';
 		.soft-skills-grid {
 			gap: 0.75rem;
 			padding: 0 0.25rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.education-card,
@@ -548,6 +772,52 @@ import Icon from '../components/Icon.astro';
 		.soft-skill-icon,
 		.skill-icon {
 			font-size: 2rem;
+		}
+
+		/* Timeline mobile styles */
+		.background-timeline {
+			padding: 1rem 0;
+			margin: 0 0.25rem;
+		}
+
+		.background-timeline::before {
+			left: 20px;
+		}
+
+		.timeline-item {
+			gap: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.timeline-marker {
+			width: 40px;
+			height: 40px;
+			font-size: 1rem;
+		}
+
+		.timeline-content {
+			padding: 1rem;
+		}
+
+		.timeline-content h3 {
+			font-size: var(--text-sm);
+		}
+
+		.timeline-subtitle {
+			font-size: 0.75rem;
+		}
+
+		.focus-card {
+			padding: 1.25rem;
+			margin: 1rem 0.25rem 0 0.25rem;
+		}
+
+		.focus-icon {
+			font-size: 1.75rem;
+		}
+
+		.focus-content h3 {
+			font-size: var(--text-base);
 		}
 	}
 </style>
