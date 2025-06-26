@@ -1,12 +1,11 @@
 ---
 // Cute animated cat component with site's aesthetic
----
-
 interface Props {
   size?: 'small' | 'medium' | 'large';
 }
 
 const { size = 'medium' } = Astro.props;
+---
 
 <div class={`cat-container ${size}`}>
   <div class="cat">

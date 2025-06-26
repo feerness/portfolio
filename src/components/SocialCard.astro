@@ -1,3 +1,4 @@
+---
 import Icon from './Icon.astro';
 
 interface Props {
@@ -26,6 +27,7 @@ const platformData = {
 };
 
 const data = platformData[platform];
+---
 
 <div class="social-card" data-platform={platform}>
   <a href={url} target="_blank" rel="noopener noreferrer">
