@@ -57,10 +57,5 @@ This portfolio is automatically deployed to GitHub Pages via GitHub Actions on e
 - **LinkedIn**: [fernanda-fariña-valdés](https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271)
 - **Email**: fernandafarinavaldes@gmail.com
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 *Built with ❤️ and ☕ in Santiago, Chile*
