@@ -1,5 +1,5 @@
 ---
-// Cute animated cat component with site's aesthetic
+// Minimalist cat head silhouette with site's aesthetic
 interface Props {
   size?: 'small' | 'medium' | 'large';
 }
@@ -8,52 +8,12 @@ const { size = 'medium' } = Astro.props;
 ---
 
 <div class={`cat-container ${size}`}>
-  <div class="cat">
-    <!-- Cat body -->
-    <div class="cat-body">
-      <!-- Cat head -->
-      <div class="cat-head">
-        <!-- Cat ears -->
-        <div class="cat-ear left"></div>
-        <div class="cat-ear right"></div>
-        <div class="cat-ear-inner left"></div>
-        <div class="cat-ear-inner right"></div>
-        
-        <!-- Cat face -->
-        <div class="cat-face">
-          <!-- Eyes -->
-          <div class="cat-eye left">
-            <div class="pupil"></div>
-            <div class="sparkle"></div>
-          </div>
-          <div class="cat-eye right">
-            <div class="pupil"></div>
-            <div class="sparkle"></div>
-          </div>
-          
-          <!-- Nose -->
-          <div class="cat-nose"></div>
-          
-          <!-- Mouth -->
-          <div class="cat-mouth"></div>
-          
-          <!-- Whiskers -->
-          <div class="whisker whisker-1"></div>
-          <div class="whisker whisker-2"></div>
-          <div class="whisker whisker-3"></div>
-          <div class="whisker whisker-4"></div>
-        </div>
-      </div>
-      
-      <!-- Cat body main -->
-      <div class="cat-body-main">
-        <!-- Cat paws -->
-        <div class="cat-paw left"></div>
-        <div class="cat-paw right"></div>
-      </div>
-      
-      <!-- Cat tail -->
-      <div class="cat-tail"></div>
+  <div class="cat-silhouette">
+    <!-- Cat head silhouette -->
+    <div class="cat-head">
+      <!-- Cat ears -->
+      <div class="cat-ear left"></div>
+      <div class="cat-ear right"></div>
     </div>
     
     <!-- Floating hearts -->
@@ -75,27 +35,23 @@ const { size = 'medium' } = Astro.props;
   }
 
   .cat-container.small {
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
 
   .cat-container.medium {
-    width: 300px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
   }
 
   .cat-container.large {
-    width: 400px;
-    height: 450px;
+    width: 280px;
+    height: 280px;
   }
 
-  .cat {
+  .cat-silhouette {
     position: relative;
-    animation: catBounce 3s ease-in-out infinite;
-  }
-
-  .cat-body {
-    position: relative;
+    animation: gentleFloat 4s ease-in-out infinite;
   }
 
   .cat-head {
@@ -103,338 +59,138 @@ const { size = 'medium' } = Astro.props;
     width: 120px;
     height: 100px;
     background: linear-gradient(145deg, var(--gradient-stop-1), var(--gradient-stop-2));
-    border-radius: 50px 50px 40px 40px;
-    margin: 0 auto 10px;
+    border-radius: 50%;
+    margin: 0 auto;
     box-shadow: var(--shadow-md);
+    animation: subtleGlow 3s ease-in-out infinite;
   }
 
-  /* Ears */
+  /* Cat ears - more defined and cat-like */
   .cat-ear {
     position: absolute;
-    width: 25px;
-    height: 35px;
+    width: 35px;
+    height: 45px;
     background: linear-gradient(145deg, var(--gradient-stop-1), var(--gradient-stop-2));
-    border-radius: 50% 50% 50% 50%;
-    top: -15px;
+    border-radius: 50% 50% 0 0;
+    top: -25px;
+    animation: earTwitch 5s ease-in-out infinite;
   }
 
   .cat-ear.left {
-    left: 15px;
-    transform: rotate(-30deg);
-    animation: earWiggle 4s ease-in-out infinite;
+    left: 20px;
+    transform: rotate(-20deg);
+    animation-delay: 0s;
   }
 
   .cat-ear.right {
-    right: 15px;
-    transform: rotate(30deg);
-    animation: earWiggle 4s ease-in-out infinite 0.2s;
-  }
-
-  .cat-ear-inner {
-    position: absolute;
-    width: 12px;
-    height: 18px;
-    background: var(--accent-regular);
-    border-radius: 50%;
-    top: -12px;
-  }
-
-  .cat-ear-inner.left {
-    left: 21px;
-    transform: rotate(-30deg);
-  }
-
-  .cat-ear-inner.right {
-    right: 21px;
-    transform: rotate(30deg);
-  }
-
-  .cat-face {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 60px;
-  }
-
-  /* Eyes */
-  .cat-eye {
-    position: absolute;
-    width: 18px;
-    height: 22px;
-    background: var(--gray-0);
-    border-radius: 50% 50% 50% 50%;
-    top: 10px;
-    animation: blink 6s ease-in-out infinite;
-  }
-
-  .cat-eye.left {
-    left: 15px;
-  }
-
-  .cat-eye.right {
-    right: 15px;
-  }
-
-  .pupil {
-    position: absolute;
-    width: 8px;
-    height: 12px;
-    background: var(--gray-999);
-    border-radius: 50%;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: eyeMove 8s ease-in-out infinite;
-  }
-
-  .sparkle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: var(--gray-0);
-    border-radius: 50%;
-    top: 6px;
-    left: 8px;
-    animation: sparkle 2s ease-in-out infinite;
-  }
-
-  /* Nose */
-  .cat-nose {
-    position: absolute;
-    width: 8px;
-    height: 6px;
-    background: var(--accent-regular);
-    border-radius: 0 0 50% 50%;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: noseWiggle 3s ease-in-out infinite;
-  }
-
-  /* Mouth */
-  .cat-mouth {
-    position: absolute;
-    width: 20px;
-    height: 10px;
-    border: 2px solid var(--gray-600);
-    border-top: none;
-    border-radius: 0 0 50px 50px;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .cat-mouth::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 8px;
-    background: var(--gray-600);
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Whiskers */
-  .whisker {
-    position: absolute;
-    width: 25px;
-    height: 1px;
-    background: var(--gray-400);
-    border-radius: 1px;
-  }
-
-  .whisker-1 {
-    top: 25px;
-    left: -5px;
-    transform: rotate(-10deg);
-    animation: whiskerMove 4s ease-in-out infinite;
-  }
-
-  .whisker-2 {
-    top: 32px;
-    left: -3px;
-    transform: rotate(5deg);
-    animation: whiskerMove 4s ease-in-out infinite 0.3s;
-  }
-
-  .whisker-3 {
-    top: 25px;
-    right: -5px;
-    transform: rotate(10deg);
-    animation: whiskerMove 4s ease-in-out infinite 0.1s;
-  }
-
-  .whisker-4 {
-    top: 32px;
-    right: -3px;
-    transform: rotate(-5deg);
-    animation: whiskerMove 4s ease-in-out infinite 0.4s;
-  }
-
-  /* Body */
-  .cat-body-main {
-    position: relative;
-    width: 100px;
-    height: 120px;
-    background: linear-gradient(145deg, var(--gradient-stop-2), var(--gradient-stop-3));
-    border-radius: 50px 50px 30px 30px;
-    margin: 0 auto;
-    box-shadow: var(--shadow-md);
-  }
-
-  /* Paws */
-  .cat-paw {
-    position: absolute;
-    width: 20px;
-    height: 25px;
-    background: linear-gradient(145deg, var(--gradient-stop-1), var(--gradient-stop-2));
-    border-radius: 50% 50% 50% 50%;
-    bottom: -10px;
-    animation: pawMove 2s ease-in-out infinite;
-  }
-
-  .cat-paw.left {
-    left: 15px;
-  }
-
-  .cat-paw.right {
-    right: 15px;
-    animation-delay: 1s;
-  }
-
-  /* Tail */
-  .cat-tail {
-    position: absolute;
-    width: 80px;
-    height: 15px;
-    background: linear-gradient(90deg, var(--gradient-stop-2), var(--gradient-stop-3));
-    border-radius: 20px;
-    top: 140px;
-    left: -60px;
-    transform-origin: right center;
-    animation: tailWag 2.5s ease-in-out infinite;
-    box-shadow: var(--shadow-sm);
+    right: 20px;
+    transform: rotate(20deg);
+    animation-delay: 0.5s;
   }
 
   /* Hearts */
   .heart {
     position: absolute;
-    font-size: 20px;
+    font-size: 16px;
     animation: floatHeart 4s ease-in-out infinite;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   .heart-1 {
-    top: -20px;
-    left: -30px;
+    top: -30px;
+    left: -40px;
     animation-delay: 0s;
   }
 
   .heart-2 {
-    top: -10px;
-    right: -40px;
+    top: -20px;
+    right: -45px;
     animation-delay: 1.5s;
   }
 
   .heart-3 {
-    top: 50px;
-    left: -40px;
+    top: 30px;
+    left: -50px;
     animation-delay: 3s;
   }
 
   /* Shadow */
   .shadow {
     position: absolute;
-    bottom: -20px;
-    width: 120px;
-    height: 20px;
+    bottom: -30px;
+    width: 100px;
+    height: 15px;
     background: radial-gradient(ellipse, rgba(0,0,0,0.1) 0%, transparent 70%);
     border-radius: 50%;
-    animation: shadowPulse 3s ease-in-out infinite;
+    animation: shadowPulse 4s ease-in-out infinite;
   }
 
   /* Animations */
-  @keyframes catBounce {
+  @keyframes gentleFloat {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
   }
 
-  @keyframes earWiggle {
-    0%, 100% { transform: rotate(-30deg); }
-    50% { transform: rotate(-25deg); }
+  @keyframes subtleGlow {
+    0%, 100% { 
+      box-shadow: var(--shadow-md);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.02);
+    }
   }
 
-  @keyframes blink {
-    0%, 90%, 100% { height: 22px; }
-    95% { height: 2px; }
+  @keyframes earTwitch {
+    0%, 90%, 100% { transform: rotate(var(--initial-rotation)); }
+    95% { transform: rotate(calc(var(--initial-rotation) + 5deg)); }
   }
 
-  @keyframes eyeMove {
-    0%, 100% { transform: translateX(-50%); }
-    25% { transform: translateX(-60%); }
-    75% { transform: translateX(-40%); }
+  .cat-ear.left {
+    --initial-rotation: -20deg;
   }
 
-  @keyframes sparkle {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
-  }
-
-  @keyframes noseWiggle {
-    0%, 100% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.1); }
-  }
-
-  @keyframes whiskerMove {
-    0%, 100% { transform: rotate(-10deg); }
-    50% { transform: rotate(-5deg); }
-  }
-
-  @keyframes pawMove {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-  }
-
-  @keyframes tailWag {
-    0%, 100% { transform: rotate(-10deg); }
-    50% { transform: rotate(15deg); }
+  .cat-ear.right {
+    --initial-rotation: 20deg;
   }
 
   @keyframes floatHeart {
     0% { transform: translateY(0px) scale(0.8); opacity: 0; }
-    25% { opacity: 0.8; }
-    75% { opacity: 0.8; }
-    100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+    25% { opacity: 0.7; }
+    75% { opacity: 0.7; }
+    100% { transform: translateY(-40px) scale(1.1); opacity: 0; }
   }
 
   @keyframes shadowPulse {
     0%, 100% { transform: scale(1); opacity: 0.1; }
-    50% { transform: scale(1.1); opacity: 0.15; }
+    50% { transform: scale(1.05); opacity: 0.15; }
   }
 
   /* Responsive */
   @media (max-width: 50em) {
     .cat-container.medium {
-      width: 250px;
-      height: 300px;
+      width: 160px;
+      height: 160px;
     }
     
     .cat-head {
       width: 100px;
       height: 85px;
     }
-    
-    .cat-body-main {
-      width: 85px;
-      height: 100px;
+
+    .cat-ear {
+      width: 30px;
+      height: 38px;
+      top: -20px;
     }
 
-    .cat-tail {
-      width: 70px;
-      left: -50px;
+    .cat-ear.left {
+      left: 18px;
+    }
+
+    .cat-ear.right {
+      right: 18px;
     }
   }
 </style> 
