@@ -18,10 +18,16 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 /** Test if a link is pointing to the current page. */
 const isCurrentPage = (href: string) => {
-	let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-	if (pathname.at(0) !== '/') pathname = '/' + pathname;
-	if (pathname.at(-1) !== '/') pathname += '/';
-	return pathname === href || (href !== '/' && pathname.startsWith(href));
+	const currentPath = Astro.url.pathname;
+	const baseUrl = import.meta.env.BASE_URL || '/';
+	
+	// Normalize both paths
+	const normalizeHref = href.endsWith('/') ? href : href + '/';
+	const normalizeCurrentPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+	
+	// Check if current path matches the href
+	return normalizeCurrentPath === normalizeHref || 
+		   (normalizeHref !== baseUrl && normalizeCurrentPath.startsWith(normalizeHref));
 };
 ---
 
