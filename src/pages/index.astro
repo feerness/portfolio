@@ -71,12 +71,7 @@ const projects = (await getCollection('work'))
 					</Grid>
 				</div>
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
+
 			</section>
 
 			<section class="section with-background bg-variant">
@@ -92,10 +87,7 @@ const projects = (await getCollection('work'))
 						{
 							[
 								{ name: 'GitHub', url: 'https://github.com/feerness' },
-								{ name: 'LinkedIn', url: 'https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271' },
-								{ name: 'NeoVC', url: 'https://www.neovc.com' },
-								{ name: 'Portfolio', url: '#' },
-								{ name: 'Contact', url: 'mailto:fernandafarinavaldes@gmail.com' }
+								{ name: 'LinkedIn', url: 'https://www.linkedin.com/in/fernanda-fariña-valdés-a23966271' }
 							].map((platform) => (
 								<li class="mention-card">
 									<a href={platform.url} target="_blank" rel="noopener noreferrer">
