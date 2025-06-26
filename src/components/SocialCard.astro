@@ -232,8 +232,8 @@ const data = platformData[platform];
 
   .social-card:hover .card-background {
     background: linear-gradient(135deg, 
-      rgba(var(--gradient-stop-1-rgb), 0.9), 
-      rgba(var(--gradient-stop-2-rgb), 0.9)
+      var(--gradient-stop-1), 
+      var(--gradient-stop-2)
     );
     border-color: var(--accent-regular);
     box-shadow: var(--shadow-lg);
@@ -241,7 +241,7 @@ const data = platformData[platform];
 
   .social-card:hover .icon-container {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 30px rgba(var(--accent-regular-rgb), 0.4);
+    box-shadow: 0 10px 30px rgba(118, 17, 166, 0.4);
   }
 
   .social-card:hover .icon-glow {
